@@ -4,7 +4,7 @@ public class HelloJpn implements DisplayHello{
 
 	@Override
 	public void sayHello() {
-		System.out.println("¿ÀÇÏ¿ä!");
+		System.out.println("ì˜¤í•˜ìš”!");
 	}
 
 	

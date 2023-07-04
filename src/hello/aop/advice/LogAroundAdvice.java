@@ -8,20 +8,17 @@ public class LogAroundAdvice implements MethodInterceptor {
 	@Override
 	public Object invoke(MethodInvocation invocation) throws Throwable {
 
-		// ºÎ°¡¾÷¹«1(½Ã°£ÃøÁ¤)
 		long start = System.currentTimeMillis();
 
-		// ÁÖ¾÷¹« ºÎ¸£±â
 		Object result = invocation.proceed();
 
-		// ºÎ°¡¾÷¹«2(½Ã°£ÃøÁ¤)
 		long end = System.currentTimeMillis();
 		
 		
 		long duration = end - start;
 		
 		String methodName = invocation.getMethod().getName();
-		System.out.printf("¸Ş¼Òµå %sÀÇ ÃÑ ¼Ò¿ä½Ã°£ : %d ms °É·ÈÀ½\n", methodName, duration);
+		System.out.printf("ì‹¤í–‰ ë©”ì†Œë“œ : %s, ì†Œìš” ì‹œê°„ : %d ms ê±¸ë ¸ìŒ!\n", methodName, duration);
 
 		return result;
 		
